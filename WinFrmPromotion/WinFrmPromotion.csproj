@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D8018CE-67B4-4ED6-914A-9C135C8EA1BD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WinFrmPromotion</RootNamespace>
+    <AssemblyName>WinFrmPromotion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Apps.UIHelper, Version=1.0.0.0, Culture=neutral, PublicKeyToken=74fbc55729e22a3e" />
+    <Reference Include="FrontendUI.WPF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4df814adf3f91828" />
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.2.2.4\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore, Version=6.1.0.0, Culture=neutral, PublicKeyToken=5d1104efbd0e675d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Log4Net.AspNetCore.6.1.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Octokit, Version=7.0.1.0, Culture=neutral, PublicKeyToken=0be8860aee462442, processorArchitecture=MSIL">
+      <HintPath>..\packages\Octokit.7.0.1\lib\netstandard2.0\Octokit.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Dataflow.7.0.0\lib\net462\System.Threading.Tasks.Dataflow.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VM.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=61600122bc9264b9" />
+    <Reference Include="VMControls.BaseInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=14444b8df74b6e6a" />
+    <Reference Include="VMControls.Interface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cb41614600cf774b" />
+    <Reference Include="VMControls.RenderInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4bcfc50547abbb24" />
+    <Reference Include="VMControls.Winform.Release, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2efa940dfee4dc7e, processorArchitecture=MSIL" />
+    <Reference Include="VMControls.WPF.Release, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fdd2c8be7291c30c" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="设计模式\Adapter.cs" />
+    <Compile Include="设计模式\Decorator.cs" />
+    <Compile Include="设计模式\Observe.cs" />
+    <Compile Include="设计模式\Proxy.cs" />
+    <Compile Include="设计模式\设计模式.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="设计模式\设计模式.Designer.cs">
+      <DependentUpon>设计模式.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ant编程\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ant编程\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ant编程\FrmBackgroundWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ant编程\FrmBackgroundWorker.Designer.cs">
+      <DependentUpon>FrmBackgroundWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ant编程\LINQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ant编程\LINQ.Designer.cs">
+      <DependentUpon>LINQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\AutoSizeFormClass.cs" />
+    <Compile Include="Common\DeepClone.cs" />
+    <Compile Include="Common\Loghelper.cs" />
+    <Compile Include="Ant编程\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ant编程\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimothyLiu\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimothyLiu\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Task的延时.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Task的延时.Designer.cs">
+      <DependentUpon>Task的延时.cs</DependentUpon>
+    </Compile>
+    <Compile Include="单例实现.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="单例实现.Designer.cs">
+      <DependentUpon>单例实现.cs</DependentUpon>
+    </Compile>
+    <Compile Include="属性控件.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="属性控件.Designer.cs">
+      <DependentUpon>属性控件.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\控件自适应窗体变化.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\控件自适应窗体变化.Designer.cs">
+      <DependentUpon>控件自适应窗体变化.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试taskAwait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试taskAwait.Designer.cs">
+      <DependentUpon>测试taskAwait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ant编程\GenericDelegate.cs" />
+    <Compile Include="Ant编程\MulticastDelegate.cs" />
+    <Compile Include="Ant编程\PersonalEvent.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ant编程\SampleSort.cs" />
+    <Compile Include="测试task.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试task.Designer.cs">
+      <DependentUpon>测试task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试TaskWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试TaskWait.Designer.cs">
+      <DependentUpon>测试TaskWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试开始暂停停止.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试开始暂停停止.Designer.cs">
+      <DependentUpon>测试开始暂停停止.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ant编程\特性使用.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ant编程\特性使用.Designer.cs">
+      <DependentUpon>特性使用.cs</DependentUpon>
+    </Compile>
+    <Compile Include="阻塞队列.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="阻塞队列.Designer.cs">
+      <DependentUpon>阻塞队列.cs</DependentUpon>
+    </Compile>
+    <Compile Include="阻塞集合.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="阻塞集合.Designer.cs">
+      <DependentUpon>阻塞集合.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="设计模式\设计模式.resx">
+      <DependentUpon>设计模式.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ant编程\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ant编程\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ant编程\FrmBackgroundWorker.resx">
+      <DependentUpon>FrmBackgroundWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ant编程\LINQ.resx">
+      <DependentUpon>LINQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Task的延时.resx">
+      <DependentUpon>Task的延时.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimothyLiu\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="单例实现.resx">
+      <DependentUpon>单例实现.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="属性控件.resx">
+      <DependentUpon>属性控件.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\控件自适应窗体变化.resx">
+      <DependentUpon>控件自适应窗体变化.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试task.resx">
+      <DependentUpon>测试task.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试taskAwait.resx">
+      <DependentUpon>测试taskAwait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试TaskWait.resx">
+      <DependentUpon>测试TaskWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试开始暂停停止.resx">
+      <DependentUpon>测试开始暂停停止.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ant编程\特性使用.resx">
+      <DependentUpon>特性使用.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="阻塞队列.resx">
+      <DependentUpon>阻塞队列.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="阻塞集合.resx">
+      <DependentUpon>阻塞集合.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MySqlHelper\MySqlHelper.csproj">
+      <Project>{bcf5a476-5d6e-439e-91cf-ec58c1c182e2}</Project>
+      <Name>MySqlHelper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
